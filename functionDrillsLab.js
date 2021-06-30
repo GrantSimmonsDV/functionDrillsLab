@@ -5,8 +5,10 @@
 */
 
 //CODE HERE
-
-
+function helloWorld() {
+  console.log('Hello, World!')
+}
+helloWorld()
 ////////////////// PROBLEM 2 ////////////////////
 /*
   Create a function called printName which takes in a persons name and console logs it.
@@ -15,8 +17,10 @@
 */
 
 //CODE HERE
-
-
+function printName(name) {
+  console.log(name)
+}
+printName('Grant')
 ////////////////// PROBLEM 3 ////////////////////
 /*
   Create a function called greeting that
@@ -28,8 +32,10 @@
 */
 
 //CODE HERE
-
-
+function greeting(name) {
+  console.log(`Hello, ${name}`)
+}
+greeting('Katie')
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called add that takes in two parameters (both of these will be numbers)
@@ -38,8 +44,12 @@
 */
 
 //CODE HERE
+function add(num1, num2) {
+  return num1 + num2;
+}
+let sum = add(2, 3)
 
-
+console.log(sum)
 ////////////////// PROBLEM 5 ////////////////////
 /*
   Write a function called nameCheck that takes in a name parameter.
@@ -50,8 +60,18 @@
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if (name === 'Steven') {
+    return 'What is up, Steven?'
+  } else if (name === 'Bryan') {
+    return 'Hey, Bryan!'
+  } else {
+    return `Cool name, ${name}`
+  }
+}
+let nameGreeting = nameCheck('Kevin')
 
-
+console.log(nameGreeting)
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -63,7 +83,20 @@
 */
 
 //CODE HERE
+function faveColorFinder(color) {
+  if (color === 'red') {
+    return 'red is a great color'
+  } else if (color === 'green') {
+    return 'green is a solid favorite color'
+  } else if (color === 'black') {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('orange')
 
+console.log(colorRating)
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -74,6 +107,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printALlNames(names) {
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i])
+  }
+}
+printALlNames(namesArr)
 
 
 ////////////////// PROBLEM 8 ////////////////////
@@ -85,10 +124,18 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(num) {
+  if (num % 2 === 0) {
+    return "That's not odd"
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd(13)
 
-
+console.log(oddChecker)
 ////////////////// PROBLEM 9 ////////////////////
-let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -99,7 +146,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
+function bigOrSmall(arr) {
+  let answers = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push('big')
+    } else if (arr[i] <= 100) {
+      answers.push('small')
+    }
+  }
+  // console.log(answers)
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -110,6 +170,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestants, loser) {
+  for (let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice([i], 1)
+    }
+  }
+  return contestants
+}
+theEliminator(contestants, loser)
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -119,8 +188,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+function sample(sentence) {
+  console.log(sentence.toUpperCase())
+}
+sample(sampleString)
 ////////////////// PROBLEM 12 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -128,8 +199,15 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+const frog = 3;
+let purse = 20;
+
+function lucky(gold) {
+  if (purse)
+}
 
 
+lucky(20)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name just add a 2 to the end of it) that fixes this bug. Store the returned value to a variable called `totalFrogs2`.
@@ -139,7 +217,7 @@ let sampleString = "Hi, my name is Kylo."
 
 
 ////////////////// PROBLEM 14 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
