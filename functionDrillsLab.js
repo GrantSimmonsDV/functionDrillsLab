@@ -199,22 +199,25 @@ sample(sampleString)
 */
 
 //CODE HERE
-const frog = 3;
-let purse = 20;
 
 function lucky(gold) {
-  if (purse)
+  return gold / 3;
 }
 
-
-lucky(20)
+let totalFrogs = lucky(20)
+console.log(totalFrogs)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name just add a 2 to the end of it) that fixes this bug. Store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
+function lucky2(gold) {
+  return Math.trunc(gold / 3);
+}
 
+let totalFrogs2 = lucky2(20)
+console.log(totalFrogs2)
 
 ////////////////// PROBLEM 14 ////////////////////
 let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
@@ -224,6 +227,18 @@ let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 
 //CODE HERE
 
+
+function Prob(sampleArray) {
+  for (let i = 0; i < sampleArray.length; i++) {
+    if (sampleArray[i] < sampleArray[i + 1]) {
+      return true;
+    } else if (sampleArray[i] > sampleArray[i + 1]) {
+      return false;
+    }
+  }
+}
+let arrayIsAscending = Prob(sampleArray)
+console.log(arrayIsAscending)
 
 ////////////////// PROBLEM 15 ////////////////////
 
@@ -247,13 +262,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['rubberDuck', 'sailorDuck', 'realDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['sailorDuck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['realDuck']

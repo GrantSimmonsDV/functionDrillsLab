@@ -15,10 +15,8 @@
 */
 
 //CODE HERE
-function printName(name) {
-    console.log(name)
-}
-printName('Grant')
+
+
 ////////////////// PROBLEM 3 ////////////////////
 /*
   Create a function called greeting that
@@ -30,10 +28,8 @@ printName('Grant')
 */
 
 //CODE HERE
-function greeting(name) {
-    console.log(`Hello, ${name}`)
-}
-greeting('Lance')
+
+
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called add that takes in two parameters (both of these will be numbers)
@@ -42,11 +38,8 @@ greeting('Lance')
 */
 
 //CODE HERE
-function add(num1, num2) {
-    return num1 + num2
-}
-let sum = add(2, 6)
-console.log(sum)
+
+
 ////////////////// PROBLEM 5 ////////////////////
 /*
   Write a function called nameCheck that takes in a name parameter.
@@ -57,17 +50,8 @@ console.log(sum)
 */
 
 //CODE HERE
-function nameCheck(name) {
-    if (name === 'Steve') {
-        return ('What is up Steven?')
-    } else if (name === 'Bryan') {
-        return ('Hey, Bryan!')
-    } else {
-        return (`Cool name, ${name}`)
-    }
-}
-let nameGreeting = nameCheck('James')
-console.log(nameGreeting)
+
+
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -90,13 +74,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-function printALlNames(ray) {
-    for (let i = 0; i < ray.length; i++) {
-        console.log(ray[i])
-    }
-}
-printALlNames(namesArr)
-console.log(printALlNames)
+
+
 ////////////////// PROBLEM 8 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -120,19 +99,8 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-function bigOrSmall(arr) {
-    let answers = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 100) {
-            answers.push('big')
-        } else if (arr[i] <= 100) {
-            answers.push('small')
-        }
-    }
-    return answers
-}
-let arrayEvaluator = bigOrSmall(bigOrSmallArray)
-console.log(arrayEvaluator)
+
+
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -142,7 +110,7 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-function theEliminator
+
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -184,14 +152,14 @@ let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 let duck = "cute";
 
 function bathroom() {
-    let rubberDuck = "squeaky";
-    function bathtub() {
-        let sailorDuck = "nautical";
-    }
+  let rubberDuck = "squeaky";
+  function bathtub() {
+    let sailorDuck = "nautical";
+  }
 }
 
 function pond() {
-    let realDuck = "fluffy";
+  let realDuck = "fluffy";
 }
 
 /*
